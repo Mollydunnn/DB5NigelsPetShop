@@ -20,7 +20,7 @@ CREATE TABLE Adoption
 			REFERENCES Person(PersonID),
 		CONSTRAINT Adoption_FK2 FOREIGN KEY (CustomerID)
 			REFERENCES Person(PersonID),
-		CONSTRAINT Adoption_FK3 FOREIGN KEY (AdoptionID)
+		CONSTRAINT Adoption_FK3 FOREIGN KEY (AnimalID)
 			REFERENCES Animal(AnimalID)); 
 					  
 CREATE TABLE Inventory
