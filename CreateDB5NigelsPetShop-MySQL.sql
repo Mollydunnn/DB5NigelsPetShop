@@ -22,3 +22,25 @@ CREATE TABLE Adoption
 			REFERENCES Person(PersonID),
 		CONSTRAINT Adoption_FK3 FOREIGN KEY (AdoptionID)
 			REFERENCES Animal(AnimalID)); 
+					  
+CREATE TABLE Inventory
+		(InventoryID decimal(11,0), 
+		 ProductName varchar(20), 
+		 Price decimal(6,2), 
+		 CONSTRAINT Inventory_PK PRIMARY KEY(InventoryID));
+			     
+CREATE TABLE Order1
+		(OrderID decimal(11,0), 
+		 OrderDate date, 
+		 PersonID decimal(11,0), 
+		 CONSTRAINT Order_PK PRIMARY KEY(OrderID), 
+		 CONSTRAINT Order_FK1 FOREIGN KEY(PersonID) REFERENCES Person(PersonID));
+									      
+CREATE TABLE OrderLine
+		(OrderedQuantity int, 
+		 InventoryID decimal(11,0), 
+		 OrderID decimal(11,0),
+		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
+		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
+										 
+										 
