@@ -42,5 +42,19 @@ CREATE TABLE OrderLine
 		 OrderID decimal(11,0),
 		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
 		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
+--adding values:
+INSERT INTO Inventory
+VALUES ( 001, ‘Green Grass Kibble’, 40.00);
+
+INSERT INTO Inventory
+VALUES ( 002, ‘Indestructible Squeaky Toy’, 25.00);
+INSERT INTO Inventory
+VALUES ( 003, ‘Princess Leash’, 20.00);
+
+INSERT INTO Inventory
+VALUES ( 004, ‘Custom Collar’, 15.00);
+										 
+
+										 
 										 
 										 
