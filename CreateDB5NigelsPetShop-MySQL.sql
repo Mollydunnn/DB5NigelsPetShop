@@ -43,6 +43,8 @@ CREATE TABLE OrderLine
 		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
 		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
 --adding values:
+INSERT INTO Person (PersonID, Username, Password, Name)
+VALUES (12345, 'joe', 'schmo', 'Joe Schmo'); 
 INSERT INTO Inventory
 VALUES ( 001, ‘Green Grass Kibble’, 40.00);
 
