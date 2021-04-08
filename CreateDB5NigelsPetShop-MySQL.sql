@@ -25,7 +25,7 @@ CREATE TABLE Adoption
 			REFERENCES Animal(AnimalID)); 
 					  
 CREATE TABLE Inventory
-		(InventoryID decimal(11,0), 
+		(InventoryID int, 
 		 ProductName varchar(20), 
 		 Price decimal(6,2), 
 		 CONSTRAINT Inventory_PK PRIMARY KEY(InventoryID));
