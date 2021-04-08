@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS Person
+DROP TABLE IF EXISTS Person;
 CREATE TABLE Person 
 	(PersonID NUMERIC(11,0) NOT NULL,
 		Username VARCHAR(25) NOT NULL,
@@ -7,7 +7,8 @@ CREATE TABLE Person
 		ShippingAddress VARCHAR(40), 
 		BillingAddress VARCHAR(40), 
 		EmployeePosition CHAR(25), 
-		PersonType CHAR(15) NOT NULL,
+		EmployeeType TINYINT(1) NOT NULL,
+     		CustomerType TINYINT(1) NOT NULL,
 		CONSTRAINT Person_PK PRIMARY KEY (PersonID);
 CREATE TABLE Adoption
 	(AdoptionID NUMERIC(11,0) NOT NULL,
