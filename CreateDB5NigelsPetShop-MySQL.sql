@@ -40,7 +40,7 @@ CREATE TABLE Order1
 CREATE TABLE OrderLine
 		(OrderedQuantity int, 
 		 InventoryID int, 
-		 OrderID intl,
+		 OrderID int,
 		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
 		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
 --adding values:
