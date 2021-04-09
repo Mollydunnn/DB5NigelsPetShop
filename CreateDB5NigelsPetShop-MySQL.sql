@@ -7,18 +7,29 @@ CREATE TABLE Person
 		ShippingAddress VARCHAR(40), 
 		BillingAddress VARCHAR(40), 
 		EmployeePosition CHAR(25), 
-		CONSTRAINT Person_PK PRIMARY KEY (PersonID);
+		CONSTRAINT Person_PK PRIMARY KEY (PersonID));
+	 
+CREATE TABLE Animal
+	 (AnimalID int,
+	  AnimalName varchar(20),
+	  Type varchar(3),
+	  Gender varchar(1)
+	  Breed varchar(20)
+	  Neutered varchar(1)
+	  Decalwed varchar(1),
+	  CONSTRAINT Person_PK PRIMARY KEY (AnimalID));
+					    
 CREATE TABLE Adoption
 	(AdoptionID int,
 		DateOfAdoption DATE,
 		EmployeeID int,
 		CustomerID int,
-		AnimalID NUMERIC(11,0),
+		AnimalID int,
 		CONSTRAINT Adoption_PK PRIMARY KEY (AdoptionID),
 		CONSTRAINT Adoption_FK1 FOREIGN KEY (EmployeeID)
-			REFERENCES person(PersonID),
+			REFERENCES Person(PersonID),
 		CONSTRAINT Adoption_FK2 FOREIGN KEY (CustomerID)
-			REFERENCES person(PersonID),
+			REFERENCES Person(PersonID),
 		CONSTRAINT Adoption_FK3 FOREIGN KEY (AnimalID)
 			REFERENCES Animal(AnimalID)); 
 					  
@@ -39,9 +50,9 @@ CREATE TABLE OrderLine
 		(OrderedQuantity int, 
 		 InventoryID int, 
 		 OrderID int,
-		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
-		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
-INSERT INTO person(PersonID, Username, Password, Name)
+		 CONSTRAINT OrderLine_PK1 PRIMARY KEY (InventoryID, OrderID));
+						       
+INSERT INTO Person(PersonID, Username, Password, Name)
 VALUES ( 3, 'joe', 'schmo', 'joe schmo');
 										 
 INSERT INTO Inventory
