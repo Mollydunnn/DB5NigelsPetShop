@@ -13,9 +13,9 @@ CREATE TABLE Animal
 	 (AnimalID int,
 	  AnimalName varchar(20),
 	  Type varchar(3),
-	  Gender varchar(1)
-	  Breed varchar(20)
-	  Neutered varchar(1)
+	  Gender varchar(1),
+	  Breed varchar(20),
+	  Neutered varchar(1),
 	  Decalwed varchar(1),
 	  CONSTRAINT Person_PK PRIMARY KEY (AnimalID));
 					    
