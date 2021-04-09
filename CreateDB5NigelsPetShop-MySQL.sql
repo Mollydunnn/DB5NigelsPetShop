@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS Person;
-CREATE TABLE person 
-	(PersonID int NOT NULL,
+CREATE TABLE Person 
+	(PersonID int,
 		Username VARCHAR(25),
 		Password VARCHAR(25),
 		Name VARCHAR(25),
@@ -42,7 +42,7 @@ CREATE TABLE OrderLine
 		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
 		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
 INSERT INTO person(PersonID, Username, Password, Name)
-VALUES ( 3, 'joe', 'schmo', 'joe schmo')
+VALUES ( 3, 'joe', 'schmo', 'joe schmo');
 										 
 INSERT INTO Inventory
 VALUES ( 1, 'Green Grass Kibble', 40.00);
@@ -56,25 +56,25 @@ INSERT INTO Inventory
 VALUES ( 4, 'Custom Collar', 15.00);
 
 INSERT INTO Order1
-VALUES (1, 2021-04-07, 3)
+VALUES (1, 2021-04-07, 3);
 	
 INSERT INTO Order1
-VALUES (2, 2021-04-04, 3)
+VALUES (2, 2021-04-04, 3);
 										 
 INSERT INTO OrderLine
-VALUES (3, 1, 2)
+VALUES (3, 1, 2);
 										 
 INSERT INTO OrderLine
-VALUES (4, 2, 2)										
+VALUES (4, 2, 2);										
 										 
 INSERT INTO OrderLine
-VALUES (5, 1, 4)
+VALUES (5, 1, 4);
 										 
 INSERT INTO OrderLine
-VALUES (5, 1, 5)																				 
+VALUES (5, 1, 5);																				 
 										 
 INSERT INTO OrderLine
-VALUES (5, 1, 6)
+VALUES (5, 1, 6);
 										 
 INSERT INTO OrderLine
-VALUES (5, 1, 9)									
+VALUES (5, 1, 9);									
