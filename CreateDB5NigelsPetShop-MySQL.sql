@@ -1,20 +1,18 @@
 DROP TABLE IF EXISTS Person;
 CREATE TABLE person 
 	(PersonID int NOT NULL,
-		Username VARCHAR(25) NOT NULL,
-		Password VARCHAR(25) NOT NULL,
-		Name VARCHAR(25) NOT NULL,
+		Username VARCHAR(25),
+		Password VARCHAR(25),
+		Name VARCHAR(25),
 		ShippingAddress VARCHAR(40), 
 		BillingAddress VARCHAR(40), 
 		EmployeePosition CHAR(25), 
-		--EmployeeType TINYINT(1) NOT NULL,
-     		--CustomerType TINYINT(1) NOT NULL,
 		CONSTRAINT Person_PK PRIMARY KEY (PersonID);
 CREATE TABLE Adoption
-	(AdoptionID int NOT NULL,
+	(AdoptionID int,
 		DateOfAdoption DATE,
-		EmployeeID int NOT NULL,
-		CustomerID int NOT NULL,
+		EmployeeID int,
+		CustomerID int,
 		AnimalID NUMERIC(11,0),
 		CONSTRAINT Adoption_PK PRIMARY KEY (AdoptionID),
 		CONSTRAINT Adoption_FK1 FOREIGN KEY (EmployeeID)
@@ -43,7 +41,6 @@ CREATE TABLE OrderLine
 		 OrderID int,
 		 CONSTRAINT OrderLine_FK1 FOREIGN KEY(InventoryID) REFERENCES Inventory(InventoryID), 
 		 CONSTRAINT OrderLine_FK2 FOREIGN KEY(OrderID) REFERENCES Order1(OrderID));
---adding values:
 INSERT INTO person(PersonID, Username, Password, Name)
 VALUES ( 3, 'joe', 'schmo', 'joe schmo')
 										 
