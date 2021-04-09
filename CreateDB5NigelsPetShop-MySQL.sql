@@ -62,10 +62,19 @@ INSERT INTO Order1
 VALUES (2, 2021-04-04, 3)
 										 
 INSERT INTO OrderLine
-VALUES (3, 1, 1)
+VALUES (3, 1, 2)
 										 
 INSERT INTO OrderLine
 VALUES (4, 2, 2)										
 										 
+INSERT INTO OrderLine
+VALUES (5, 1, 4)
 										 
+INSERT INTO OrderLine
+VALUES (5, 1, 5)																				 
 										 
+INSERT INTO OrderLine
+VALUES (5, 1, 6)
+										 
+INSERT INTO OrderLine
+VALUES (5, 1, 9)									
