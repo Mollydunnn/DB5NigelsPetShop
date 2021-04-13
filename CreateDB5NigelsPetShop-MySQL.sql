@@ -51,6 +51,12 @@ CREATE TABLE OrderLine
 		 InventoryID int, 
 		 OrderID int,
 		 CONSTRAINT OrderLine_PK1 PRIMARY KEY (InventoryID, OrderID));
+						   
+CREATE TABLE Immunization
+		(ImmunizationID int, 
+		 ImmunizationName varchar(20),
+         	 ImmunizationDate date,
+		 CONSTRAINT Immunization_PK1 PRIMARY KEY (ImmunizationID));
 						       
 INSERT INTO Person(PersonID, Username, Password, Name)
 VALUES ( 3, 'joe', 'schmo', 'joe schmo');
