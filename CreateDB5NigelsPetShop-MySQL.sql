@@ -55,8 +55,16 @@ CREATE TABLE OrderLine
 CREATE TABLE Immunization
 		(ImmunizationID int, 
 		 ImmunizationName varchar(20),
-         	 ImmunizationDate date,
 		 CONSTRAINT Immunization_PK1 PRIMARY KEY (ImmunizationID));
+							  
+CREATE TABLE AnimalImmunization
+		(ImmunizationID int, 
+		 AnimalID int,
+         	 ImmunizationDate date,
+		 CONSTRAINT AnimalImmunization_FK1 FOREIGN KEY (ImmunizationID)
+			REFERENCES Immunization(ImmunizationID),
+         	 CONSTRAINT AnimalImmunization_FK2 FOREIGN KEY (AnimalID)
+			REFERENCES Animal(AnimalID));
 						       
 INSERT INTO Person(PersonID, Username, Password, Name)
 VALUES ( 3, 'joe', 'schmo', 'joe schmo');
