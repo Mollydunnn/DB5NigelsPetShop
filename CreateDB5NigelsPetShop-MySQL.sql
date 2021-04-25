@@ -1,4 +1,5 @@
-DROP TABLE IF EXISTS Person
+DROP TABLE IF EXISTS Person;
+DROP TABLE IF EXISTS Adoption; 
 CREATE TABLE Person 
 	(PersonID NUMERIC(11,0) NOT NULL,
 		Username VARCHAR(25) NOT NULL,
@@ -8,7 +9,7 @@ CREATE TABLE Person
 		BillingAddress VARCHAR(40), 
 		EmployeePosition CHAR(25), 
 		PersonType CHAR(15) NOT NULL,
-		CONSTRAINT Person_PK PRIMARY KEY (PersonID);
+		CONSTRAINT Person_PK PRIMARY KEY (PersonID));
 CREATE TABLE Adoption
 	(AdoptionID NUMERIC(11,0) NOT NULL,
 		DateOfAdoption DATE,
@@ -22,3 +23,10 @@ CREATE TABLE Adoption
 			REFERENCES Person(PersonID),
 		CONSTRAINT Adoption_FK3 FOREIGN KEY (AdoptionID)
 			REFERENCES Animal(AnimalID)); 
+			
+
+INSERT INTO Person (PersonID, Username, Password, Name)
+VALUES (12345, 'joe', 'schmo', 'Joe Schmo'); 
+
+INSERT INTO Person (PersonID, Username, Password, Name)
+VALUES (44444, 'stevebuscemi', 'dog', 'Steve Buscemi'); 
