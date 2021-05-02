@@ -1,8 +1,5 @@
 DROP TABLE IF EXISTS Person;
-<<<<<<< HEAD
 DROP TABLE IF EXISTS Adoption; 
-=======
->>>>>>> 8e2f4a8b1e039e4c798f7e249a1531b1683667fb
 CREATE TABLE Person 
 	(PersonID int,
 		Username VARCHAR(25),
@@ -11,10 +8,8 @@ CREATE TABLE Person
 		ShippingAddress VARCHAR(40), 
 		BillingAddress VARCHAR(40), 
 		EmployeePosition CHAR(25), 
-<<<<<<< HEAD
 		PersonType CHAR(15) NOT NULL,
 		CONSTRAINT Person_PK PRIMARY KEY (PersonID));
-=======
 		CONSTRAINT Person_PK PRIMARY KEY (PersonID));
 	 
 CREATE TABLE Animal
@@ -27,7 +22,6 @@ CREATE TABLE Animal
 	  Decalwed varchar(1),
 	  CONSTRAINT Person_PK PRIMARY KEY (AnimalID));
 					    
->>>>>>> 8e2f4a8b1e039e4c798f7e249a1531b1683667fb
 CREATE TABLE Adoption
 	(AdoptionID int,
 		DateOfAdoption DATE,
@@ -39,7 +33,6 @@ CREATE TABLE Adoption
 			REFERENCES Person(PersonID),
 		CONSTRAINT Adoption_FK2 FOREIGN KEY (CustomerID)
 			REFERENCES Person(PersonID),
-<<<<<<< HEAD
 		CONSTRAINT Adoption_FK3 FOREIGN KEY (AdoptionID)
 			REFERENCES Animal(AnimalID)); 
 			
@@ -49,9 +42,7 @@ VALUES (12345, 'joe', 'schmo', 'Joe Schmo');
 
 INSERT INTO Person (PersonID, Username, Password, Name)
 VALUES (44444, 'stevebuscemi', 'dog', 'Steve Buscemi'); 
-=======
-		CONSTRAINT Adoption_FK3 FOREIGN KEY (AnimalID)
-			REFERENCES Animal(AnimalID)); 
+
 					  
 CREATE TABLE Inventory
 		(InventoryID int, 
@@ -123,4 +114,3 @@ VALUES (5, 1, 6);
 										 
 INSERT INTO OrderLine
 VALUES (5, 1, 9);									
->>>>>>> 8e2f4a8b1e039e4c798f7e249a1531b1683667fb
