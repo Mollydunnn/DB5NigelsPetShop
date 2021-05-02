@@ -1,17 +1,4 @@
-DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Adoption; 
-CREATE TABLE Person 
-	(PersonID int,
-		Username VARCHAR(25),
-		Password VARCHAR(25),
-		Name VARCHAR(25),
-		ShippingAddress VARCHAR(40), 
-		BillingAddress VARCHAR(40), 
-		EmployeePosition CHAR(25), 
-		PersonType CHAR(15) NOT NULL,
-		CONSTRAINT Person_PK PRIMARY KEY (PersonID));
-		CONSTRAINT Person_PK PRIMARY KEY (PersonID));
-	 
+DROP TABLE IF EXISTS Adoption;  
 CREATE TABLE Animal
 	 (AnimalID int,
 	  AnimalName varchar(20),
