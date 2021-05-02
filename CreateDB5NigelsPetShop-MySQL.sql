@@ -8,6 +8,7 @@ CREATE TABLE Animal
 	  Breed varchar(20),
 	  Neutered tinyint(1),
 	  Decalwed tinyint(1),
+	  Status tinyint(1),
 	  CONSTRAINT Person_PK PRIMARY KEY (AnimalID));
 					    
 CREATE TABLE Adoption
@@ -16,16 +17,8 @@ CREATE TABLE Adoption
 		EmployeeID int,
 		CustomerID int,
 		AnimalID int,
-		CONSTRAINT Adoption_PK PRIMARY KEY (AdoptionID),
-		CONSTRAINT Adoption_FK1 FOREIGN KEY (EmployeeID)
-			REFERENCES Person(PersonID),
-		CONSTRAINT Adoption_FK2 FOREIGN KEY (CustomerID)
-			REFERENCES Person(PersonID),
-		CONSTRAINT Adoption_FK3 FOREIGN KEY (AdoptionID)
-			REFERENCES Animal(AnimalID)); 
+		CONSTRAINT Adoption_PK PRIMARY KEY (AdoptionID)); 
 			
-
-					  
 CREATE TABLE Inventory
 		(InventoryID int, 
 		 ProductName varchar(20), 
@@ -36,8 +29,7 @@ CREATE TABLE Order1
 		(OrderID int, 
 		 OrderDate date, 
 		 PersonID int, 
-		 CONSTRAINT Order_PK PRIMARY KEY(OrderID), 
-		 CONSTRAINT Order_FK1 FOREIGN KEY(PersonID) REFERENCES Person(PersonID));
+		 CONSTRAINT Order_PK PRIMARY KEY(OrderID));
 									      
 CREATE TABLE OrderLine
 		(OrderedQuantity int, 
