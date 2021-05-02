@@ -80,4 +80,5 @@ ADD FOREIGN KEY (EmployeeID) REFERENCES `user`(id);
 ALTER TABLE Adoption
 ADD FOREIGN KEY (CustomerID) REFERENCES `user`(id);
 					  
-
+ALTER TABLE Order1
+ADD FOREIGN KEY (PersonID) REFERENCES `user`(id)
