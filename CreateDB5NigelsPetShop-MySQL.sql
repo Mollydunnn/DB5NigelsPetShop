@@ -58,3 +58,9 @@ CREATE TABLE AnimalImmunization
 			REFERENCES Immunization(ImmunizationID),
          	 CONSTRAINT AnimalImmunization_FK2 FOREIGN KEY (AnimalID)
 			REFERENCES Animal(AnimalID));																	
+
+					  
+INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (1, 'Green Grass Kibble', 40.00);
+INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (2, 'Indestructible Squee', 25.00);		
+INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (3, 'Princess Leash', 40.00);
+INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (4, 'Customer Collar', 25.00);	
