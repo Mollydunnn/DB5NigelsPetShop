@@ -71,3 +71,13 @@ VALUES(5, 'Fifi', 'Dog', 'F', 'Yorkie', 1, NULL, 1);
 INSERT INTO Animal
 VALUES(6, 'Thomas', 'Cat', 'M', 'Tabby', 1, NULL, 1);
 
+					  
+--This code should be executed after a user has been added through the registration on our application
+ALTER TABLE Adoption
+ADD FOREIGN KEY (AnimalID) REFERENCES Animal(AnimalID);
+ALTER TABLE Adoption
+ADD FOREIGN KEY (EmployeeID) REFERENCES `user`(id);
+ALTER TABLE Adoption
+ADD FOREIGN KEY (CustomerID) REFERENCES `user`(id);
+					  
+
