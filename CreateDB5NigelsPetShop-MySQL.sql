@@ -64,3 +64,18 @@ INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (1, 'Green Grass 
 INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (2, 'Indestructible Squee', 25.00);		
 INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (3, 'Princess Leash', 40.00);
 INSERT INTO Inventory (InventoryID, ProductName, Price) VALUES (4, 'Customer Collar', 25.00);	
+
+					  
+INSERT INTO Animal
+VALUES(1, 'tiny dog', 'Dog', 'F', 'Cocker Spaniel', 1, NULL, 1);
+INSERT INTO Animal
+VALUES(2, 'Foucault', 'Dog', 'M', 'French Bulldog', 1, NULL, 1);
+INSERT INTO Animal
+VALUES(3, 'Griffin', 'Dog', 'M', 'Airedale Terrier', 1, NULL, 1);
+INSERT INTO Animal
+VALUES(4, 'Griffin', 'Dog', 'M', 'Chihuahua', 1, NULL, 1);
+INSERT INTO Animal
+VALUES(5, 'Fifi', 'Dog', 'F', 'Yorkie', 1, NULL, 1);
+INSERT INTO Animal
+VALUES(6, 'Thomas', 'Cat', 'M', 'Tabby', 1, NULL, 1);
+
