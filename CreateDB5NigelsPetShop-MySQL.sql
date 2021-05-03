@@ -82,3 +82,21 @@ ADD FOREIGN KEY (CustomerID) REFERENCES `user`(id);
 					  
 ALTER TABLE Order1
 ADD FOREIGN KEY (PersonID) REFERENCES `user`(id)
+					  
+INSERT INTO Immunization
+VALUES(1, 'Bordatella');					  
+INSERT INTO Immunization
+VALUES(2, 'Rabies');
+INSERT INTO Immunization
+VALUES(3, 'Hepatitis');
+INSERT INTO Immunization
+VALUES(4, 'Leptospirosis');
+INSERT INTO Immunization
+VALUES(5, 'FVRCP');
+					  
+INSERT INTO Animal
+VALUES(7, 'Rexina', 'Cat', 'F', 'Persian', 1, 0, 1);
+INSERT INTO Animal
+VALUES(8, 'Snowball', 'Dog', 'F', 'Maltese', 1, NULL, 1);
+INSERT INTO Animal
+VALUES(8, 'Max', 'Dog', 'M', 'Siberian Husky', 0, NULL, 1);
