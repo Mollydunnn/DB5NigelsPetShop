@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <!-- <a class="mr-2" href="#">{{ row }}</a> <br/>  
+        put pic first-->
+        
+        <h2><a class="article-title" >{{ row.AnimalName }}</a></h2>
+        <h2><a class="article-title" >{{ row.Breed }}</a></h2>
+        <h2><a class="article-title" >Gender: {{ row.Gender }}</a></h2>
+        <h2><a class="article-title" >{{ row.Type }}</a></h2>
+        {% if row.Neutered==1%}
+        <h2><a class="article-title" >Neutered: Yes</a></h2>
+        {% else %}
+        <h2><a class="article-title" >Neutered: No</a></h2>
+        {% endif %}
+        {% if row.Declawed==1%}
+        <h2><a class="article-title" >Declawed: Yes</a></h2>
+        {% endif %}
+      </div>
+      <div>
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('assign_adopt', AnimalID=row.AnimalID ) }}">Adopt</a>
+        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('adopt') }}">Back</a>
+      </div>
+     
+    </div>
+  </article>  
+{% endblock content %}
